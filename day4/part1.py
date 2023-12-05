@@ -19,15 +19,6 @@ def find_winning_points(cards):
     return total
 
 
-
-
-
-
-
-
-
-
-
 lines = read_file_lines('day4/data.txt')
 cards = setup(lines)
 print(find_winning_points(cards))
