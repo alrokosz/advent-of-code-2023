@@ -12,8 +12,7 @@ def find_winning_points(cards):
             if num in winning_nums and num != '':
                 matches += 1
 
-        if matches > 0:
-            total += 2 ** (matches - 1)
+        total += 2 ** (matches - 1) if matches > 0 else 0
 
     return total
 
