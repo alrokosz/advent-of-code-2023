@@ -6,15 +6,14 @@ def find_winning_points(cards):
     for card in cards:
         winning_nums = set(card[0])
         my_nums = card[1]
-        # init to -1 so we can use 2 ** matches, but need to check if it's greater than -1 below
-        matches = -1
+        matches = 0
 
         for num in my_nums:
             if num in winning_nums and num != '':
                 matches += 1
 
-        if matches >= 0:
-            total += 2 ** matches
+        if matches > 0:
+            total += 2 ** (matches - 1)
 
     return total
 
